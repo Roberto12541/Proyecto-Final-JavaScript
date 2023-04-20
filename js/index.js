@@ -40,9 +40,9 @@ const listarProductos = async () => {
         <h5 class="card-title">${title}</h5>
         <p class="card-text">${description}</p>
         <p class="fs-6">Cantidad: ${stock}</p>
-        <div class="d-flex justify-content-between">
-          <p class="fs-3">$${price}</p>
-          <button href="#" id="${id}" onclick="agregarCarrito(${id})" class="add btn btn-primary"><i class="bi bi-cart4"></i></button>
+        <div class="d-flex justify-content-between px-2">
+          <p class="fs-2">$${price}</p>
+          <i class="add bi bi-cart4 fs-3 text-warning" id="${id}" onclick="agregarCarrito(${id})"></i>
         </div>
       </div>
     </div>`;
