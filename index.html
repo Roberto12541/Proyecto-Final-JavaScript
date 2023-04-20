@@ -5,26 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Simulador Interactivo</title>
+    <title>Entrega Final</title>
 </head>
 
-<body class="bg-dark">
+<body>
+
     <nav class="navbar border-bottom py-3">
         <div class="container">
-            <span class="navbar-brand mb-0 text-light">Cambio de divisas</span>
+            <span class="navbar-brand mb-0 fs-4">CoderStore</span>
+            <i class="bi bi-cart4 fs-4" onclick="mostrarCarrito()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"></i>
         </div>
     </nav>
-    <div class="row">
-        <form action="">
-            <select name="" id="monedas">
-                <option value=""></option>
-            </select>
-        </form>
+
+    <main>
+
+        <h1 class="text-center my-4">Productos</h1>
+        <div class="container my-5">
+            <div class="row gap-2 justify-content-evenly" id="productos"></div>
+        </div>
+    </main>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width: 40%;">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="contenidoCarrito">
+        </div>
+        <div class="offcanvas-header align-items-center" style="padding: 20px 100px; border-top: 1px solid gray;">
+            <h2 class="m-0" id="offcanvasRightLabel">Total: </h2>
+            <h2 class="m-0" id="totalCarrito"></h2>
+        </div>
     </div>
+
 </body>
 <script src="./js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 
 </html>
